@@ -11,10 +11,11 @@ public class Numbers {
             arrNumber[index] = new SecureRandom().nextInt(100);
         }
 
+        System.out.println("Values of array are: ");
         for (int value : arrNumber){
-            System.out.println(value);
+            System.out.print(value + " ");
         }
-        System.out.println("-----------------------------------------------------");
+        System.out.println("\n-----------------------------------------------------");
         for (int value : arrNumber){
             if(value % 2 == 0)
                 countEven++;

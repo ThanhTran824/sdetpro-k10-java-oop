@@ -13,9 +13,12 @@ public class MaxAndMinNumberInArray {
             arrIntNumber[index] = new SecureRandom().nextInt(100);
         }
 
+        System.out.println("Values of array are: ");
         for(int value : arrIntNumber){
-            System.out.println(value);
+            System.out.print(value + " ");
         }
+
+        System.out.println("\n");
 
         int maxNumber = arrIntNumber[0];
         int minNumber = arrIntNumber[0];

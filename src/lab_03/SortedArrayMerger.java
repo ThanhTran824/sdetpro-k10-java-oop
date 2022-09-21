@@ -23,13 +23,16 @@ public class SortedArrayMerger {
 
         //print Array
         for (int value : arrayA){
-            System.out.println(value);
+            System.out.print(value + " ");
         }
+
+        System.out.println("\n");
 
         for (int value : arrayB){
-            System.out.println(value);
+            System.out.print(value + " ");
         }
 
+        System.out.println("\n");
         //Merge
         int pivotA = -1;
         int pivotB = -1;
@@ -64,7 +67,7 @@ public class SortedArrayMerger {
 
         System.out.println("Array after merge: ");
         for (int value : arrayC){
-            System.out.println(value);
+            System.out.print(value + " ");
         }
     }
 }
