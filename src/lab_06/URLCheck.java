@@ -13,7 +13,7 @@ public class URLCheck {
         int startIndex;
         String domainName;
 
-        startIndex = url.lastIndexOf('/') + 1;
+        startIndex = url.indexOf("//") + 2;
         domainName=url.substring(startIndex, url.length());
 
         System.out.println("domain name is: " + domainName);
