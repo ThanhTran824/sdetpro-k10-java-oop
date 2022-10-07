@@ -1,10 +1,18 @@
 package lab_09;
 
 public class Employee {
-    protected int emplSalary;
-    protected String emplName;
+    private int emplSalary;
+    private String emplName;
 
     public int getSalary() {
         return this.emplSalary;
+    }
+
+    public void setSalary(int emplSalary) {
+        this.emplSalary = emplSalary;
+    }
+
+    public void setName(String emplName) {
+        this.emplName = emplName;
     }
 }

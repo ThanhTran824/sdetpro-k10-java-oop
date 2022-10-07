@@ -1,14 +1,24 @@
 package lab_09;
 
-public class RacingAnimal {
-    protected int speed;
-    protected String name;
+import java.security.SecureRandom;
 
-    public int getSpeed(){
+public class RacingAnimal {
+    private int speed;
+    private String name;
+
+    public int getSpeed() {
         return this.speed;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
+    }
+
+    public void setSpeed() {
+        this.speed = new SecureRandom().nextInt(Settings.horseMaxSpeed);
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

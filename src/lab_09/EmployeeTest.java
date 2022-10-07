@@ -7,10 +7,13 @@ public class EmployeeTest {
     public static void main(String[] args) {
         //form up data from objects
         Employee emplThanhTran = new FTE();
+        emplThanhTran.setName("Thanh");
+        emplThanhTran.setSalary(Settings.FTE_SALARY);
         Employee emplDuongTran = new Contractor();
-        Employee emplThongTran = new Contractor();
+        emplDuongTran.setName("Duong");
+        emplDuongTran.setSalary(Settings.CONTRACTOR_SALARY);
 
-        List<Employee> employeeList = Arrays.asList(emplThanhTran, emplDuongTran, emplThongTran);
+        List<Employee> employeeList = Arrays.asList(emplThanhTran, emplDuongTran);
 
         //Calling controller to process data
         int totalSalary = new EmployeeController().getTotalSalary(employeeList);
