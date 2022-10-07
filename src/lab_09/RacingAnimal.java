@@ -14,7 +14,7 @@ public class RacingAnimal {
         return this.name;
     }
 
-    public void setSpeed() {
+    public void setRandomSpeed() {
         this.speed = new SecureRandom().nextInt(Settings.horseMaxSpeed);
     }
 
