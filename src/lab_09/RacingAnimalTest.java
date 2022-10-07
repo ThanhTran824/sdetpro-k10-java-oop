@@ -6,13 +6,13 @@ import java.util.List;
 public class RacingAnimalTest {
     public static void main(String[] args) {
         RacingAnimal horse = new Horse();
-        horse.setRandomSpeed();
+        horse.setRandomSpeed(Settings.horseMaxSpeed);
         horse.setName("Horse");
         RacingAnimal tiger = new Tiger();
-        tiger.setRandomSpeed();
+        tiger.setRandomSpeed(Settings.tigerMaxSpeed);
         tiger.setName("Tiger");
         RacingAnimal dog = new Dog();
-        dog.setRandomSpeed();
+        dog.setRandomSpeed(Settings.dogMaxSpeed);
         dog.setName("Dog");
 
         List<RacingAnimal> animalList = Arrays.asList(horse, tiger, dog);
