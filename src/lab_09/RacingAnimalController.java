@@ -7,11 +7,13 @@ public class RacingAnimalController {
     public String calculateWinner(List<RacingAnimal> animalList) {
         String winner = "";
         int winnerSpeed = 0;
-        for(RacingAnimal animal : animalList){
-            System.out.println("Speed of " + animal.getName() + " is: " + animal.getSpeed());
-            if(animal.getSpeed() > winnerSpeed){
-                winnerSpeed = animal.getSpeed();
-                winner = animal.getName();
+        for (RacingAnimal animal : animalList) {
+            int animalSpeed = animal.getSpeed();
+            String animalName = animal.getName();
+            System.out.println("Speed of " + animalName + " is: " + animalSpeed);
+            if (animal.getSpeed() > winnerSpeed) {
+                winnerSpeed = animalSpeed;
+                winner = animalName;
             }
         }
 
