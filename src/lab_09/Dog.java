@@ -5,4 +5,6 @@ public class Dog extends RacingAnimal {
     public int getSpeed(){
         return super.getSpeed();
     }
+
+
 }
