@@ -1,10 +1,12 @@
 package lab_11;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RacingAnimalController {
-    public String run(List<AnimalAbstract> animalList) {
-        String winner = "";
+    public List<String> run(List<AnimalAbstract> animalList) {
+        List<String> lstWinner = new ArrayList<>();
         int winnerSpeed = 0;
 
         for (AnimalAbstract animal : animalList) {
@@ -12,11 +14,15 @@ public class RacingAnimalController {
             String animalName = animal.getName();
             System.out.println("Speed of " + animalName + " is: " + animalSpeed);
             if (animal.getSpeed() > winnerSpeed) {
+                lstWinner.clear();
                 winnerSpeed = animalSpeed;
-                winner = animalName;
+                lstWinner.add(animalName);
+            }
+            else if(animal.getSpeed() == winnerSpeed){
+                lstWinner.add(animalName);
             }
         }
 
-        return winner;
+        return lstWinner;
     }
 }

@@ -3,8 +3,8 @@ package lab_11;
 import java.security.SecureRandom;
 
 public abstract class AnimalAbstract {
-    public String name;
-    public int speed;
+    protected String name;
+    protected int speed;
 
     public abstract void setRaceSpeed(int maxSpeed);
 

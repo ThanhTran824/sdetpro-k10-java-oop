@@ -20,10 +20,18 @@ public class RacingAnimalTest {
 
         List<AnimalAbstract> animalList = Arrays.asList(horse, tiger, dog);
 
-
         //Calling RacingAnimalController
-        String winner = new RacingAnimalController().run(animalList);
-        System.out.println("Winner is: " + winner);
+        List<String> winner = new RacingAnimalController().run(animalList);
+
+        if(winner.size() == 1) {
+            System.out.print("Winner is: " + winner.get(0));
+        }
+        else {
+            System.out.print("Winners are: ");
+            for (String animal : winner) {
+                System.out.print(animal + " ");
+            }
+        }
 
     }
 }
