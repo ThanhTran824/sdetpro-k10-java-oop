@@ -7,11 +7,13 @@ import java.util.List;
 
 public class AnimalController {
 
+    // Service method
     public String getTheWinner(List<Animal> animalList) {
         String winner = "";
 
         int winnerSpeed = 0;
-        for(Animal animal : animalList){
+        List<Animal> racerAnimalList = getRacerAnimals(animalList);
+        for(Animal animal : racerAnimalList){
             int animalSpeed = animal.getAnimalSpeed();
             String animalName = animal.getAnimalName();
             System.out.println("Speed of " + animalName + " is: " + animalSpeed);
@@ -24,7 +26,8 @@ public class AnimalController {
         return winner;
     }
 
-    public List<Animal> getRacerAnimals(List<Animal> animalList) {
+    // Support method
+    private List<Animal> getRacerAnimals(List<Animal> animalList) {
         List<Animal> racerAnimalList = new ArrayList<>();
 
         for(Animal animal : animalList){

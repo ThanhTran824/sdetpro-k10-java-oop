@@ -9,26 +9,6 @@ import static lab_10.Animal.Builder;
 
 public class RacingTest {
     public static void main(String[] args) {
-        /*List<Animal> animalList = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter number animals join competitor: ");
-        int numberAnimals = scanner.nextInt();
-
-        for(int index = 0; index < numberAnimals; ++index){
-            Builder builder = new Builder();
-            System.out.println("Enter animal name: ");
-            String animalName = scanner.nextLine();
-            builder.setAnimalName(animalName);
-            System.out.println("Can animal fly?");
-            Boolean isFly = scanner.nextBoolean();
-            builder.setFly(isFly);
-            System.out.println("Enter animal speed: ");
-            int animalSpeed = scanner.nextInt();
-            builder.setAnimalSpeed(animalSpeed);
-
-            Animal animalName = builder.build();
-        }*/
 
         //Form up data
         Builder builder = new Builder();
@@ -58,8 +38,7 @@ public class RacingTest {
 
         AnimalController animalController = new AnimalController();
         List<Animal> animalList = Arrays.asList(horse, tiger, dog, eagle, squirrel);
-        List<Animal> racerAnimalList = animalController.getRacerAnimals(animalList);
-        String winner = animalController.getTheWinner(racerAnimalList);
+        String winner = animalController.getTheWinner(animalList);
         System.out.println("Winner is: " + winner);
 
     }
